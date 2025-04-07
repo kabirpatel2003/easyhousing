@@ -1,4 +1,4 @@
-<?p<?php
+<?php
 include 'includes/db.php';
 
 $message = '';

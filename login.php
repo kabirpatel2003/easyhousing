@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $user['password'])) {
             session_regenerate_id(true);
             $_SESSION['username'] = $user['username'];
-            $_SESSION['user_id'] = $user['id']; // Storing user ID for further use
+            $_SESSION['user_id'] = $user['id'];
 
             header("Location: index.php");
             exit();

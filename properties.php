@@ -1,7 +1,5 @@
 <?php
 include 'includes/db.php';
-
-// Fetch properties from the database
 $sql = "SELECT * FROM properties";
 $result = $conn->query($sql);
 ?>
@@ -18,7 +16,7 @@ $result = $conn->query($sql);
                             <h5 class="card-title"><?php echo htmlspecialchars($row['title']); ?></h5>
                             <p class="card-text"><strong>Price:</strong> $<?php echo number_format($row['price'], 2); ?></p>
                             <p class="card-text"><?php echo htmlspecialchars($row['description']); ?></p>
-                            <a href="#" class="btn btn-primary w-100">Book Now</a>
+                            <a href="book.php?id=<?php echo urlencode($row['id']); ?>" class="btn btn-primary w-100">Book Now</a>
                         </div>
                     </div>
                 </div>
